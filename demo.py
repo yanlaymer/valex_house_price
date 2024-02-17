@@ -1,7 +1,6 @@
 import streamlit as st
 from src.predictor import HouseModel, HousePricePredictor
 from pickle import load
-from streamlit_authenticator import Authenticate
 
 predictor = HousePricePredictor()
 
