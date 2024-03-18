@@ -18,7 +18,7 @@ with st.form("house_input_form"):
     construction_year = st.number_input('Construction Year', min_value=1900, max_value=2024, value=2000)
     bathroom = st.selectbox('Bathroom', ['2 с/у и более', 'во дворе', 'раздельный', 'совмещенный'])
     condition = st.selectbox('Condition', ['свободная планировка', 'среднее', 'требует ремонта', 'хорошее', 'черновая отделка'])
-    local_phone = st.selectbox('Local Phone', ['есть', 'есть возможность подключения', 'нет'])
+    local_phone = st.selectbox('Local Phone', ['есть', 'есть возможность подключение', 'нет'])
     internet = st.selectbox('Internet', ['ADSL', 'нет', 'оптика', 'проводной'])
     sewage = st.selectbox('Sewage', ['есть возможность подведения', 'нет', 'септик', 'центральная'])
     water = st.selectbox('Water', ['есть возможность подведения', 'нет', 'скважина', 'центральная'])

@@ -54,8 +54,9 @@ class HousePricePredictor:
         df.update({k + '_' + str(v): 1 for k, v in json_to_send.items() if k not in self.numerics})
 
         df = pd.DataFrame(df, index=[0])
-
-        predicted_base_price = self.house_model.predict(xgb.DMatrix(df))[0] * df['square'].values[0]
+        
+        self.price_per_square_meter = self.house_model.predict(xgb.DMatrix(df))[0]
+        predicted_base_price = self.price_per_square_meter * df['square'].values[0]
 
         # Apply location-based multipliers
         predicted_base_price = self._apply_location_multipliers(temp, predicted_base_price)
